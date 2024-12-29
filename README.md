@@ -43,8 +43,7 @@ This is a modern, responsive portfolio website built using HTML, CSS, and JavaSc
 │   └── contact.js           # Function to handle email submission
 ├── assets/                  # Static assets like images and icons
 └── README.md                # Project documentation
-
-
+```
 
 ---
 
@@ -66,6 +65,8 @@ This is a modern, responsive portfolio website built using HTML, CSS, and JavaSc
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
+
+
 
 2. Navigate to the serverless function directory and install dependencies:
 
@@ -126,9 +127,13 @@ RECEIVER_EMAIL=recipient-email@gmail.com
 ## Screenshots
 
 ### Home Page
+![image](https://github.com/user-attachments/assets/3f095495-215f-46c1-812a-8a887db0e907)
 
+![image](https://github.com/user-attachments/assets/c5f562ed-ddeb-4f78-9477-08ecc04c2800)
 
 ### Contact Form
+
+![image](https://github.com/user-attachments/assets/fb0ec477-0cd7-4acb-b2d6-4a5c4123e660)
 
 
 ---
