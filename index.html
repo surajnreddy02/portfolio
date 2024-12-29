@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Suraj's Portfolio</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Suraj N Reddy</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <a href="assets/cv/my-cv.pdf" download class="btn blue-btn">Download CV <i class="uil uil-file-alt"></i></a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Suraj N Reddy</span>
+            </div>
+            <div class="featured-name">
+                <p>I'm a <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>3rd-year ISE student at BMS College of Engineering, passionate about software development, data science, and contributing to open-source projects.</p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn">Hire Me</button>
+                <a href="assets/cv/my-cv.pdf" download class="btn">Download CV <i class="uil uil-file-alt"></i></a>
+            </div>
+            <div class="social_icons">
+                <a href="https://www.instagram.com/surajnreddy020" class="icon" title="Instagram"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/surajnreddy02/" class="icon" title="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+                <a href="https://x.com/SurajNReddy02" class="icon" title="Twitter"><i class="uil uil-twitter-alt"></i></a>
+                <a href="https://github.com/surajnreddy02" class="icon" title="GitHub"><i class="uil uil-github-alt"></i></a>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/avatar.png" alt="avatar">
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div>
+       </section>
+       
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+                <div class="about-info">
+                    <h3>My introduction</h3>
+                    <p>I am a 3rd-year ISE student with a strong passion for software development and data science. Currently, I am focusing on building full-stack web applications and exploring emerging technologies like machine learning and cloud computing.</p>
+                    <div class="about-btn">
+                        <button class="btn blue-btn" id="download-cv-btn">Download CV</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Vue</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>Node.js</span>
+                        <span>JAVA</span>
+                        <span>Python</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+       <section class="section" id="projects">
+        <div class="top-header"><h1>Projects</h1></div>
+        <div class="project-container">
+            <div class="project-box">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Completed</h3>
+                <label>5+ Mini Projects</label>
+            </div>
+            <div class="project-box">
+                <i class="uil uil-users-alt"></i>
+                <h3>Clients</h3>
+                <label>Open-source contributions</label>
+            </div>
+            <div class="project-box">
+                <i class="uil uil-award"></i>
+                <h3>Experience</h3>
+                <label>3 Years in software development</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------- CONTACT BOX ---------------- -->
+    <section class="section" id="contact">
+        <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you have a project in your mind? Contact me here.</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: surajnreddy02pro@gmail.com</p>
+                    <p><i class="uil uil-phone"></i> Tel: +91 9945595975</p>
+                </div>
+            </div>
+            <div class="col">
+                <form id="contact-form" class="form-control">
+                    <div class="form-inputs">
+                        <input type="text" id="name" class="input-field" placeholder="Your Name" required />
+                        <input type="email" id="email" class="input-field" placeholder="Your Email" required />
+                    </div>
+                    <div class="text-area">
+                        <textarea id="message" class="textarea-field" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="btn blue-btn">Send <i class="uil uil-message"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Handling Form Submission -->
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();  // Prevent default form submission
+
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Send data to the backend using fetch
+            fetch('http://localhost:5000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),  // Send the data as a JSON payload
+            })
+            .then((response) => response.json())
+            .then((data) => alert('Message sent successfully'))
+            .catch((error) => alert('Error sending message'));
+        });
+    </script>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>surajnreddy02pro</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/surajnreddy020" class="icon" title="Instagram"><i class="uil uil-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/surajnreddy02/" class="icon" title="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+            <a href="https://x.com/SurajNReddy02" class="icon" title="Twitter"><i class="uil uil-twitter-alt"></i></a>
+            <a href="https://github.com/surajnreddy02" class="icon" title="GitHub"><i class="uil uil-github-alt"></i></a>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" class="no-decoration">Suraj N Reddy</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
