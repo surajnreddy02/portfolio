@@ -168,60 +168,60 @@
     </section>
 
     <!-- -------------- CONTACT BOX ---------------- -->
-    <section class="section" id="contact">
-        <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Do you have a project in your mind? Contact me here.</span>
+<section class="section" id="contact">
+    <div class="top-header">
+        <h1>Get in touch</h1>
+        <span>Do you have a project in your mind? Contact me here.</span>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="contact-info">
+                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                <p><i class="uil uil-envelope"></i> Email: surajnreddy02pro@gmail.com</p>
+                <p><i class="uil uil-phone"></i> Tel: +91 9945595975</p>
+            </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: surajnreddy02pro@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: +91 9945595975</p>
+        <div class="col">
+            <form id="contact-form" class="form-control" method="POST" action="/.netlify/functions/contact">
+                <div class="form-inputs">
+                    <input type="text" id="name" name="name" class="input-field" placeholder="Your Name" required />
+                    <input type="email" id="email" name="email" class="input-field" placeholder="Your Email" required />
                 </div>
-            </div>
-            <div class="col">
-                <form id="contact-form" class="form-control">
-                    <div class="form-inputs">
-                        <input type="text" id="name" class="input-field" placeholder="Your Name" required />
-                        <input type="email" id="email" class="input-field" placeholder="Your Email" required />
-                    </div>
-                    <div class="text-area">
-                        <textarea id="message" class="textarea-field" placeholder="Your Message" required></textarea>
-                    </div>
-                    <div class="form-button">
-                        <button type="submit" class="btn blue-btn">Send <i class="uil uil-message"></i></button>
-                    </div>
-                </form>
-            </div>
+                <div class="text-area">
+                    <textarea id="message" name="message" class="textarea-field" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-button">
+                    <button type="submit" class="btn blue-btn">Send <i class="uil uil-message"></i></button>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- JavaScript for Handling Form Submission -->
-    <script>
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();  // Prevent default form submission
+<!-- JavaScript for Handling Form Submission -->
+<script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();  // Prevent default form submission
 
-            // Collect form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-            // Send data to the backend using fetch
-            fetch('http://localhost:5000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message }),  // Send the data as a JSON payload
-            })
-            .then((response) => response.json())
-            .then((data) => alert('Message sent successfully'))
-            .catch((error) => alert('Error sending message'));
-        });
-    </script>
+        // Send data to the Netlify serverless function using fetch
+        fetch('/.netlify/functions/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),  // Send the data as a JSON payload
+        })
+        .then((response) => response.json())
+        .then((data) => alert('Message sent successfully'))
+        .catch((error) => alert('Error sending message'));
+    });
+</script>
 
 
     <!-- --------------- FOOTER --------------- -->
