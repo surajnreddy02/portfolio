@@ -559,7 +559,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgb(68,68,68);
+        background: rgb(25,25,25);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
