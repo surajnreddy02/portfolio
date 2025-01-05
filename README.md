@@ -62,8 +62,8 @@ This is a modern, responsive portfolio website built using HTML, CSS, and JavaSc
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/surajnreddy02/portfolio.git
+cd portfolio
 ```
 
 
