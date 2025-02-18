@@ -28,6 +28,14 @@ app.get('/', (req, res) => {
 app.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
 
+  if (!name || !email || !message) {
+    return res.status(400).send('All fields are required.');
+  }
+
+  if (!validateEmail(email)) {
+    return res.status(400).send('Invalid email address.');
+  }
+
   // Setup Nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -53,6 +61,11 @@ app.post('/contact', (req, res) => {
     res.status(200).send('Email sent: ' + info.response);
   });
 });
+
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
 
 // Start the server
 app.listen(port, () => {
