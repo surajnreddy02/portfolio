@@ -151,3 +151,34 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+
+// Function to scroll smoothly with custom duration
+const scrollBtn = document.querySelector('.scroll-btn');
+scrollBtn.addEventListener('click', function() {
+    const nextSection = document.querySelector('.section'); // Replace with the desired target section
+
+    // Scroll to the next section with a custom speed
+    let targetPosition = nextSection.offsetTop;  // Get position of target section
+    let currentPosition = window.scrollY;
+    let distance = targetPosition - currentPosition;
+    let duration = 500; // Speed of scrolling (lower = faster)
+    let startTime = null;
+
+    function scrollStep(timestamp) {
+        if (!startTime) startTime = timestamp;
+        let progress = timestamp - startTime;
+        let scrollDistance = distance * (progress / duration);
+
+        // Scroll the page by the calculated distance
+        window.scrollTo(0, currentPosition + scrollDistance);
+
+        if (progress < duration) {
+            requestAnimationFrame(scrollStep);
+        } else {
+            window.scrollTo(0, targetPosition); // Ensure the final position is accurate
+        }
+    }
+
+    // Start the custom scroll animation
+    requestAnimationFrame(scrollStep);
+});
