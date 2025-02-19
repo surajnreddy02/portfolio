@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Projects - Suraj's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Suraj N Reddy</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="about-me.html" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="projects.html" class="nav-link active-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <a href="assets/cv/my-cv.pdf" download class="btn blue-btn">Download CV <i class="uil uil-file-alt"></i></a>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="wrapper">
+            <!-- Projects Header -->
+            <section class="section" id="projects-header">
+                <div class="top-header">
+                    <h1>My Projects</h1>
+                    <p>Explore my work and contributions in software development</p>
+                </div>
+            </section>
+
+            <!-- Project Filters -->
+            <section class="section" id="project-filters">
+                <div class="filter-buttons">
+                    <button class="btn filter-btn active" data-filter="all">All</button>
+                    <button class="btn filter-btn" data-filter="web">Web Development</button>
+                    <button class="btn filter-btn" data-filter="ml">Machine Learning</button>
+                    <button class="btn filter-btn" data-filter="mobile">Mobile Apps</button>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="section" id="projects-grid">
+                <div class="grid-container">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-header">
+                                    <h3>Portfolio Website</h3>
+                                    <div class="tech-stack">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Developed a responsive personal portfolio website showcasing my skills and projects.</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-features">
+                                    <h4>Key Features</h4>
+                                    <ul class="project-features">
+                                        <li>Responsive Design</li>
+                                        <li>Interactive Elements</li>
+                                        <li>SEO Optimized</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn blue-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-category="ml">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-header">
+                                    <h3>Sentiment Analysis</h3>
+                                    <div class="tech-stack">
+                                        <span>Python</span>
+                                        <span>NLP</span>
+                                        <span>TensorFlow</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Built a sentiment analysis model to classify text data into positive, negative, and neutral categories.</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-features">
+                                    <h4>Key Features</h4>
+                                    <ul class="project-features">
+                                        <li>Natural Language Processing</li>
+                                        <li>Deep Learning Model</li>
+                                        <li>API Integration</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn blue-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-header">
+                                    <h3>Task Manager App</h3>
+                                    <div class="tech-stack">
+                                        <span>React Native</span>
+                                        <span>Firebase</span>
+                                        <span>Redux</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Developed a cross-platform task management application with real-time synchronization.</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-features">
+                                    <h4>Key Features</h4>
+                                    <ul class="project-features">
+                                        <li>Offline Support</li>
+                                        <li>Push Notifications</li>
+                                        <li>User Authentication</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn blue-btn">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="top-footer">
+                <p>surajnreddy02pro</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="about-me.html">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com/surajnreddy020" class="icon" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/surajnreddy02/" class="icon" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="uil uil-linkedin-alt"></i></a>
+                <a href="https://x.com/SurajNReddy02" class="icon" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="uil uil-twitter-alt"></i></a>
+                <a href="https://github.com/surajnreddy02" class="icon" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i></a>
+            </div>        
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" class="no-decoration">Suraj N Reddy</a> - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Links -->
+    <script src="assets/js/projects.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>About Me - Suraj's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Suraj N Reddy</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="about-me.html" class="nav-link active-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <a href="assets/cv/my-cv.pdf" download class="btn blue-btn">Download CV <i class="uil uil-file-alt"></i></a>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="wrapper">
+            <!-- Biography Section -->
+            <section class="section fade-in" id="biography">
+                <div class="top-header">
+                    <h1>My Journey</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info fade-in">
+
+                            <h3>About Me</h3>
+                            <p>As a passionate software developer and data science enthusiast, I've embarked on an exciting journey in the world of technology. My academic foundation at BMS College of Engineering has provided me with a strong base in computer science principles, while my personal projects have allowed me to explore cutting-edge technologies and develop practical skills.</p>
+                            <p>My journey began with a fascination for problem-solving and a desire to create impactful solutions. Over the years, I've honed my skills in full-stack development, machine learning, and cloud computing, constantly pushing myself to learn and grow in this ever-evolving field.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="about-image">
+                            <img src="assets/images/avatar.png" alt="Suraj N Reddy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline Section -->
+            <section class="section fade-in" id="timeline">
+                <div class="top-header">
+                    <h1>My Timeline</h1>
+                </div>
+                <div class="timeline-container fade-in">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - Present</div>
+                        <div class="timeline-content">
+                            <h3>BMS College of Engineering</h3>
+                            <p>Pursuing Bachelor of Engineering in Information Science</p>
+                            <ul>
+                                <li>CGPA: 9.2/10</li>
+                                <li>Specialization in Full Stack Development</li>
+                                <li>Active participant in coding competitions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content">
+                            <h3>High School Graduation</h3>
+                            <p>Completed Pre-University Education with distinction</p>
+                            <ul>
+                                <li>Scored 95% in PCMB</li>
+                                <li>Developed interest in programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section fade-in" id="skills">
+                <div class="top-header">
+                    <h1>My Skills</h1>
+                </div>
+                <div class="skills-container fade-in">
+
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span>HTML</span>
+                                <div class="progress-bar progress-html"></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>CSS</span>
+                                <div class="progress-bar progress-css"></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>JavaScript</span>
+                                <div class="progress-bar progress-js"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-box">
+                        <div class="skills-header">
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span>Node.js</span>
+                                <div class="progress-bar progress-nodejs"></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="progress-bar progress-python"></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Java</span>
+                                <div class="progress-bar progress-java"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="section" id="testimonials">
+                <div class="top-header">
+                    <h1>Testimonials</h1>
+                </div>
+                <div class="testimonials-container">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"Suraj demonstrated exceptional problem-solving skills and technical expertise in our recent project. His dedication and attention to detail were truly impressive."</p>
+                            <div class="testimonial-author">
+                                <h4>Prof. John Doe</h4>
+                                <p>Professor, BMS College of Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="top-footer">
+                <p>surajnreddy02pro</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="about-me.html">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://www.instagram.com/surajnreddy020" class="icon" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/surajnreddy02/" class="icon" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="uil uil-linkedin-alt"></i></a>
+                <a href="https://x.com/SurajNReddy02" class="icon" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="uil uil-twitter-alt"></i></a>
+                <a href="https://github.com/surajnreddy02" class="icon" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="uil uil-github-alt"></i></a>
+            </div>        
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" class="no-decoration">Suraj N Reddy</a> - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Links -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
