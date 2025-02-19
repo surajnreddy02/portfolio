@@ -182,3 +182,25 @@ scrollBtn.addEventListener('click', function() {
     // Start the custom scroll animation
     requestAnimationFrame(scrollStep);
 });
+
+// Page transition effect
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a.nav-link, a.btn');
+    const body = document.body;
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = e.target.getAttribute('href');
+
+            body.classList.add('page-transition');
+            setTimeout(() => {
+                window.location.href = target;
+            }, 500);
+        });
+    });
+
+    window.addEventListener('load', () => {
+        body.classList.add('page-transition-active');
+    });
+});

@@ -15,7 +15,6 @@
     --second-color: rgb(25, 25, 25);
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgb(25, 25, 25);
-
 }
 
 /* ----- BASE ----- */
@@ -47,7 +46,6 @@ html{
     background: #bbb;
 }
 
-
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
@@ -55,7 +53,7 @@ html{
     font-weight: 500;
     padding: 12px 20px;
     background:rgb(25, 25, 25);
-	color: var(--color-white);
+    color: var(--color-white);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -66,7 +64,7 @@ html{
 }
 .btn:hover{
     color: var(--color-white);
-	background: var(--first-color-hover);
+    background: var(--first-color-hover);
 }
 
 /* ----- GLOBAL ICONS DESIGN ----- */
@@ -149,7 +147,6 @@ nav{
     border-radius: 50%;
 }
 
-
 /* ----- WRAPPER DESIGN ----- */
 .wrapper{
     padding-inline: 10vw;
@@ -221,7 +218,7 @@ nav{
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
     cursor: pointer;
-	color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0)
 }
 .icon:hover{
     color: var(--first-color);
@@ -455,7 +452,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: �;
 }
 .form-inputs{
     display: flex;
@@ -489,7 +486,7 @@ textarea{
     color: var(--color-white);
 }
 .form-button>.btn:hover{
-    background:rgb(192, 166, 49);	
+    background:rgb(192, 166, 49);    
 }
 .form-button i{
     font-size: 18px;
@@ -525,7 +522,7 @@ footer{
 }
 .footer_menu_list a{
     text-decoration: none;
-    color: rgb(192, 166, 49);	
+    color: rgb(192, 166, 49);    
     font-weight: 500;
     margin-inline: 20px;
 }
@@ -538,7 +535,6 @@ footer{
     margin-top: 10px;
 }
 
-
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
     .featured-text{
@@ -548,13 +544,24 @@ footer{
         width: 320px;
         height: 320px;
     }
+    .nav-menu {
+        padding-inline: 5vw;
+    }
+    .nav-link {
+        margin-inline: 10px;
+    }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
         display: none;
-
+    }
+    .nav-menu {
+        padding-inline: 3vw;
+    }
+    .nav-link {
+        margin-inline: 8px;
     }
     .nav-menu.responsive{
         left: 0;
@@ -595,7 +602,6 @@ footer{
     }
     .social_icons{
         margin-top: 2em;
-		
     }
     .featured-image{
         order: 1;
@@ -607,7 +613,6 @@ footer{
     .image, .image img{
         width: 150px;
         height: 150px;
-		
     }
     .row{
         display: flex;
@@ -629,11 +634,9 @@ footer{
     .project-box{
         width: 80%;
     }
-
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
-
 @media only screen and (max-width: 540px){
     .featured-name{
         font-size: 40px;
@@ -647,5 +650,30 @@ footer{
     .input-field{
         width: 100%;
     }
+    .nav-menu {
+        padding-inline: 2vw;
+    }
+    .nav-link {
+        margin-inline: 5px;
+        font-size: 14px;
+    }
+    .nav-name {
+        font-size: 24px;
+    }
+    .featured-text {
+        padding-left: 10px;
+    }
+    .social_icons {
+        gap: 20px;
+    }
 }
 
+/* Page transition effect */
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition-active {
+    opacity: 1;
+}

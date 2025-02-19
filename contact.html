@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Contact - Suraj's Portfolio</title>
 </head>
-<body>
+<body class="page-transition-active">
     <div class="container">
         <!-- Navigation -->
         <nav id="header">
@@ -42,7 +42,6 @@
                 <i class="uil uil-bars" onclick="myMenuFunction()"></i>
             </div>
         </nav>
-
         <!-- Main Content -->
         <main class="wrapper">
             <!-- Contact Section -->
@@ -113,6 +112,70 @@
     <!-- JavaScript Links -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- JavaScript for Animations and Scrolling Effects -->
+    <script>
+        /* ----- NAVIGATION BAR FUNCTION ----- */
+        function myMenuFunction(){
+            var menuBtn = document.getElementById("myNavMenu");
+
+            if(menuBtn.className === "nav-menu"){
+                menuBtn.className += " responsive";
+            } else {
+                menuBtn.className = "nav-menu";
+            }
+        }
+
+        /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
+        window.onscroll = function() {headerShadow()};
+
+        function headerShadow() {
+            const navHeader =document.getElementById("header");
+
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
+                navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+                navHeader.style.height = "70px";
+                navHeader.style.lineHeight = "70px";
+            } else {
+                navHeader.style.boxShadow = "none";
+                navHeader.style.height = "90px";
+                navHeader.style.lineHeight = "90px";
+            }
+        }
+
+        /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '80px',
+            duration: 2000,
+            reset: true     
+        });
+
+        /* -- CONTACT -- */
+        sr.reveal('.contact-info', {});
+        sr.reveal('.form-control', {delay: 100});
+
+        /* ----- CHANGE ACTIVE LINK ----- */
+        const sections = document.querySelectorAll('section[id]');
+
+        function scrollActive() {
+            const scrollY = window.scrollY;
+
+            sections.forEach(current =>{
+                const sectionHeight = current.offsetHeight,
+                    sectionTop = current.offsetTop - 50,
+                    sectionId = current.getAttribute('id');
+
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
+                    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
+                } else {
+                    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', scrollActive);
+    </script>
 
     <!-- JavaScript for Handling Form Submission -->
     <script>
