@@ -496,6 +496,13 @@ textarea{
     rotate: -45deg;
 }
 
+/* Remove underline from "Download CV" link */
+.nav-button a,
+.about-btn button,
+.featured-text-btn a {
+    text-decoration: none; /* Remove underline */
+}
+
 /* ----- FOOTER BOX ----- */
 footer{
     display: flex;
