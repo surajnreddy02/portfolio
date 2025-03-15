@@ -102,20 +102,19 @@
                     <h3>My introduction</h3>
                     <p>I am a 3rd-year ISE student with a strong passion for software development and data science. Currently, I am focusing on building full-stack web applications and exploring emerging technologies like machine learning and cloud computing.</p>
                     <div class="about-btn">
-    <button class="btn blue-btn" id="download-cv-btn" onclick="downloadCV()">Download CV</button>
-</div>
+                        <button class="btn blue-btn" id="download-cv-btn">Download CV</button>
+                    </div>
                 </div>
-            </div>
+            </div>div>
             <div class="col">
                 <div class="skills-box">
                     <div class="skills-header">
-                        <h3>Frontend</h3>
-                    </div>
+                        <h3>Frontend</h3>ader">
+                    </div>3>Frontend</h3>
                     <div class="skills-list">
-                        <span>HTML</span>
-                        <span>CSS</span>
+                        <span>HTML</span>st">
+                        <span>CSS</span>>
                         <span>JavaScript</span>
-                        <span>Vue</span>
                         <span>React</span>
                         <span>Node.js</span>
                         <span>Tailwind CSS</span>
@@ -221,6 +220,11 @@
         .then((response) => response.json())
         .then((data) => alert('Message sent successfully'))
         .catch((error) => alert('Error sending message'));
+    });
+
+    // Add event listener for the download CV button
+    document.getElementById('download-cv-btn').addEventListener('click', () => {
+        window.location.href = 'assets/cv/my-cv.pdf';
     });
 </script>
 
