@@ -35,11 +35,18 @@ projectCards.forEach(card => {
     // Hover effects
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'scale(1.05)';
-        card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+        card.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)'; /* Reduced shadow intensity */
     });
 
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'scale(1)';
-        card.style.boxShadow = '1px 8px 10px 2px var(--first-shadow-color)';
+        card.style.boxShadow = '1px 6px 8px 2px var(--first-shadow-color)'; /* Reduced shadow intensity */
     });
+});
+
+// Timeline Animation
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+timelineItems.forEach(item => {
+    item.classList.add('fade-in');
 });
