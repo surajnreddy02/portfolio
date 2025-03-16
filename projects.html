@@ -6,6 +6,22 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Projects - Suraj's Portfolio</title>
+    <style>
+        .highlighted-text {
+            color: black;
+        }
+        .project-card, .footer-social-icons .icon {
+            transition: transform 0.3s ease-in-out;
+            background: var(--color-white);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-image: linear-gradient(to right, rgba(192, 166, 49, 0.1), rgba(25, 25, 25, 0.1));
+        }
+        .project-image {
+            transition: none; /* Remove zoom-in effect */
+        }
+    </style>
 </head>
 <body class="page-transition-active">
     <div class="container">
@@ -48,7 +64,7 @@
             <section class="section" id="projects-header">
                 <div class="top-header">
                     <h1>My Projects</h1>
-                    <p>Explore my work and contributions in software development</p>
+                    <p class="highlighted-text">Explore my work and contributions in software development</p>
                 </div>
             </section>
 
@@ -69,9 +85,9 @@
                     <div class="project-card" data-category="web">
                         <div class="card-inner">
                             <div class="card-content">
-                                <h3>Hotel Management System</h3>
-                                <p>A comprehensive system for managing hotel operations, including room bookings, guest check-ins and check-outs, and billing.</p>
-                                <div class="tech-stack">
+                                <h3 class="highlighted-text">Hotel Management System</h3>
+                                <p class="highlighted-text">A comprehensive system for managing hotel operations, including room bookings, guest check-ins and check-outs, and billing.</p>
+                                <div class="tech-stack highlighted-text">
                                     <span>JavaScript</span>
                                     <span>React</span>
                                     <span>Tailwind</span>
