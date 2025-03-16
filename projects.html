@@ -260,9 +260,22 @@
     <script src="assets/js/projects.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- JavaScript for Animations and Scrolling Effects -->
     <script>
+        // Lazy loading with a delay of 0.5 seconds
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href]');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+                    document.body.classList.remove('page-transition-active');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // 0.5 second delay
+                });
+            });
+        });
+
         /* ----- NAVIGATION BAR FUNCTION ----- */
         function myMenuFunction(){
             var menuBtn = document.getElementById("myNavMenu");
