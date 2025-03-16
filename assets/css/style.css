@@ -211,6 +211,7 @@ nav{
     display: flex;
     margin-top: 5em;
     gap: 30px;
+    
 }
 .icon{
     display: flex;
@@ -218,11 +219,15 @@ nav{
     align-items: center;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     color:rgb(0, 0, 0);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    background: var(--color-white);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: linear-gradient(to right, rgba(192, 166, 49, 0.1), rgba(25, 25, 25, 0.1));
 }
 .icon:hover{
     color: var(--first-color);
