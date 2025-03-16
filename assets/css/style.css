@@ -94,9 +94,13 @@ nav{
     z-index: 100;
 }
 .nav-logo{
-   position: relative;
+    position: relative;
+    cursor: pointer; /* Indicate that the logo is clickable */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
 }
-.nav-name{
+.nav-logo .nav-name{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-third);
@@ -215,12 +219,15 @@ nav{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 0px 2px 3px 0px rgb(0, 0, 0); /* Reduced shadow intensity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .icon:hover{
     color: var(--first-color);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
@@ -431,20 +438,27 @@ h3{
     align-items: center;
     flex-direction: column;
     width: 30%;
-    height: 250px;
+    height: 300px; /* Increased height for better visibility */
     background: var(--color-white);
-    border-radius: 20px;
-    box-shadow: 1px 6px 8px 2px var(--first-shadow-color); /* Reduced shadow intensity */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow intensity */
     overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: linear-gradient(to right, rgba(192, 166, 49, 0.1), rgba(25, 25, 25, 0.1));
+}
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow intensity */
 }
 .project-box>i{
-    font-size: 50px;
+    font-size: 60px; /* Increased icon size */
     color:rgb(192, 166, 49);
     margin-bottom: 25px;
 }
 .project-box label{
-    font-size: 15px;
+    font-size: 18px; /* Increased label font size */
     color: var(--second-color);
+    text-align: center; /* Center align text */
 }
 .project-box::after, .contact-info::after{
     content: "";
@@ -475,8 +489,8 @@ h3{
 }
 .project-card {
     display: flex;
-    background: var(--first-color);
-    color: var(--color-white);
+    background: var (--first-color);
+    color: var (--color-white);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow intensity */
@@ -485,7 +499,7 @@ h3{
     margin-bottom: 20px; /* Add gap between cards */
 }
 .project-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow intensity */
 }
 .project-card .card-inner {
@@ -503,7 +517,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     background: var(--color-white); /* White background on the right */
-    color: var(--first-color); /* Black text color */
+    color: var (--first-color); /* Black text color */
 }
 .project-card .card-content h3 {
     margin-bottom: 10px;
@@ -590,36 +604,59 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
+    padding: 40px 30px;
     width: 100%;
-    height: 315px;
-    background: var(--color-white); /* Changed background color for better contrast */
-    border-radius: 10px;
-    box-shadow: 1px 6px 8px 2px var(--first-shadow-color); /* Reduced shadow intensity */
-    overflow: hidden;
+    background: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: linear-gradient(to right, rgba(192, 166, 49, 0.1), rgba(25, 25, 25, 0.1));
+    margin-top: 20px; /* Added margin-top to fix overlap issue */
+    z-index: 1; /* Ensure it is above other elements */
+    overflow: hidden; /* Ensure the pseudo-element is contained */
+    text-align: center; /* Center align text */
+}
+.contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%; /* Start the pseudo-element off-screen */
+    background: var(--first-color); /* Changed background color for better contrast */
+    width: 100%;
+    height: 100%;
+    transition: bottom 0.4s; /* Transition the bottom property */
+    z-index: 0;
+}
+.contact-info:hover::after{
+    bottom: 0; /* Bring the pseudo-element into view on hover */
+}
+.contact-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .contact-info>h2{
-    color: var(--second-color); /* Changed text color for better contrast */
+    font-size: 28px;
+    color: var(--text-color-second);
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    z-index: 1; /* Ensure text is above the pseudo-element */
 }
 .contact-info>p{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--second-color); /* Changed text color for better contrast */
-    margin-block: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    z-index: 1; /* Ensure text is above the pseudo-element */
 }
 .contact-info p>i{
     font-size: 18px;
+    z-index: 1; /* Ensure icon is above the pseudo-element */
 }
-.contact-info::after{
-    background: var(--first-color); /* Changed background color for better contrast */
-}
-.contact-info:hover.contact-info h2,
-.contact-info:hover.contact-info p,
-.contact-info:hover.contact-info i{
+.contact-info:hover h2,
+.contact-info:hover p,
+.contact-info:hover i{
     color: var(--third-color); /* Changed hover text color for better contrast */
-    z-index: 2;
 }
 
 /* ----- CONTACT FORM ----- */
@@ -684,6 +721,7 @@ footer {
     row-gap: 30px;
     background-color: var(--body-color); /* Changed background color to blend with surrounding */
     padding-block: 40px 60px;
+    z-index: 1; /* Ensure it is below other elements */
 }
 
 .top-footer p {
@@ -780,7 +818,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         background: var(--color-white); /* White background on the right */
-        color: var(--first-color); /* Black text color */
+        color: var (--first-color); /* Black text color */
     }
 
     .project-card .card-content h3 {
