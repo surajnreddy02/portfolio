@@ -144,6 +144,17 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     }
 
     // If validation passes, submit the form
+    fetch("https://surajnreddy02.netlify.app/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name: name, email: email, message: message }) // Ensure valid JSON
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
     this.submit();
 });
 

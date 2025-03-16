@@ -15,8 +15,10 @@ filterButtons.forEach(button => {
         projectCards.forEach(card => {
             if (filter === 'all' || card.dataset.category === filter) {
                 card.style.display = 'block';
+                card.classList.add('fade-in');
             } else {
                 card.style.display = 'none';
+                card.classList.remove('fade-in');
             }
         });
     });
